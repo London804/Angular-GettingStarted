@@ -44,7 +44,10 @@
                    [style.margin.px]='imageMargin'>
                     <!--you could also do string Interpolation  src={{product.imageUrl}} -->
             </td>
-            <td>{{ product.productName }}</td>
+            <td><a 
+              [routerLink]="['/products', product.productId]">
+              {{ product.productName }}</a>
+            </td>
             <td>{{ product.productCode | convertToSpaces: '-'}}</td>
             <td>{{ product.releaseDate }}</td>
             <td>{{ product.price | currency}}</td>
